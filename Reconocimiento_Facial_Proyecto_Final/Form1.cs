@@ -20,16 +20,16 @@ namespace Reconocimiento_Facial_Proyecto_Final
         FaceRec faceRec = new FaceRec();
         private void btnAbrircamara_Click(object sender, EventArgs e)
         {
-            faceRec.openCamera(pictureBox1, pictureBox2);
+            
+            faceRec.openCamera(pictureCamara,pictureBoxCaptura);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            faceRec.getPersonName(txtNombre);
+            //faceRec.getPersonName(txtNombre);
             faceRec.Save_IMAGE(txtNombre.Text);
             MessageBox.Show("Muy bien " + txtNombre.Text + ", Guardado exitoso.");
         }
-
         private void btnCapturar_Click(object sender, EventArgs e)
         {
             faceRec.isTrained = true;
